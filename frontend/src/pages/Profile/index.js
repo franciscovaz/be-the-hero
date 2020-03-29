@@ -16,13 +16,15 @@ export default function Profile() {
   const ongName = localStorage.getItem('ongName');
 
   useEffect(() => {
-    api.get('profile', {
-      headers: {
-        Authorization: ongId,
-      }
-    }).then( response => {
-      setIncidents(response.data);
-    })
+    api
+      .get('profile', {
+        headers: {
+          Authorization: ongId,
+        },
+      })
+      .then((response) => {
+        setIncidents(response.data);
+      });
   }, [ongId]);
 
   async function handleDelete(id) {
@@ -30,10 +32,10 @@ export default function Profile() {
       await api.delete(`incidents/${id}`, {
         headers: {
           Authorization: ongId,
-        }
+        },
       });
 
-      setIncidents(incidents.filter(incident => incident.id !==id));
+      setIncidents(incidents.filter((incident) => incident.id !== id));
     } catch (err) {
       alert('Erro ao eliminar o caso, tente novamente.');
     }
@@ -51,16 +53,18 @@ export default function Profile() {
         <img src={logoImg} alt="Be The Hero" />
         <span>Bem vinda, {ongName}</span>
 
-        <Link to="/incidents/new" className="button">Registar novo caso</Link>
-        <button onClick={handleLogout} type="button" >
+        <Link to="/incidents/new" className="button">
+          Registar novo caso
+        </Link>
+        <button onClick={handleLogout} type="button">
           <FiPower size={18} color="#E02041" />
-        </button> 
+        </button>
       </header>
 
       <h1>Casos Registados</h1>
 
       <ul>
-        {incidents.map( incident => (
+        {incidents.map((incident) => (
           <li key={incident.id}>
             <strong>CASO:</strong>
             <p>{incident.title}</p>
@@ -70,11 +74,14 @@ export default function Profile() {
 
             <strong>VALOR:</strong>
             {/* Para conversçao do EURO */}
-            <p>{Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR' }).format(incident.value)}</p>
+            <p>
+              {Intl.NumberFormat('pt-PT', {
+                style: 'currency',
+                currency: 'EUR',
+              }).format(incident.value)}
+            </p>
 
-            <button 
-              onClick={() => handleDelete(incident.id)}
-              type="button">
+            <button onClick={() => handleDelete(incident.id)} type="button">
               <FiTrash2 size={20} color="#a8a8b3" />
             </button>
           </li>

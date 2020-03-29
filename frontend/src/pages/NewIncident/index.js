@@ -22,20 +22,17 @@ export default function NewIncident() {
     const data = {
       title,
       description,
-      value
+      value,
     };
 
     try {
       const response = await api.post('incidents', data, {
-        headers: {
-          Authorization: ongId,
-        }
+        headers: { Authorization: ongId },
       });
 
       alert(`Caso com o ID: ${response.data.id} criado com sucesso.`);
 
       history.push('/profile');
-
     } catch (err) {
       alert('Erro ao registar caso, tente novamente.');
     }
@@ -45,36 +42,44 @@ export default function NewIncident() {
     <div className="new-incident-container">
       <div className="content">
         <section>
-          <img src={logoImg} alt="Be The Hero"/>
+          <img src={logoImg} alt="Be The Hero" />
 
           <h1>Registar novo caso</h1>
-          <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
-          
-          <Link className="back-link"to="/profile">
+          <p>
+            Descreva o caso detalhadamente para encontrar um herói para resolver
+            isso.
+          </p>
+
+          <Link className="back-link" to="/profile">
             <FiArrowLeft size={16} color="#E02041" />
             Voltar para home
           </Link>
         </section>
 
         <form onSubmit={handleNewIncident}>
-          <input 
+          <input
             value={title}
-            onChange={e => setTitle(e.target.value)}
-            placeholder="Título do caso" />
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder="Título do caso"
+          />
 
-          <textarea 
+          <textarea
             value={description}
-            onChange={e => setDescription(e.target.value)}
-            placeholder="Descrição" />
+            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Descrição"
+          />
 
-          <input 
+          <input
             value={value}
-            onChange={e => setValue(e.target.value)}
-            placeholder="Valor em euros"/>
+            onChange={(e) => setValue(e.target.value)}
+            placeholder="Valor em euros"
+          />
 
-          <button className="button" type="submit">Registar</button>
+          <button className="button" type="submit">
+            Registar
+          </button>
         </form>
       </div>
     </div>
-  )
+  );
 }
