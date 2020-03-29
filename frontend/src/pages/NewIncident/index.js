@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import './styles.css';
+import { NewIncidentContainer, Content, Section, Form } from './styles';
 
 import api from '../../services/api';
 
@@ -39,9 +39,9 @@ export default function NewIncident() {
   }
 
   return (
-    <div className="new-incident-container">
-      <div className="content">
-        <section>
+    <NewIncidentContainer>
+      <Content>
+        <Section>
           <img src={logoImg} alt="Be The Hero" />
 
           <h1>Registar novo caso</h1>
@@ -54,9 +54,9 @@ export default function NewIncident() {
             <FiArrowLeft size={16} color="#E02041" />
             Voltar para home
           </Link>
-        </section>
+        </Section>
 
-        <form onSubmit={handleNewIncident}>
+        <Form onSubmit={handleNewIncident}>
           <input
             value={title}
             onChange={(e) => setTitle(e.target.value)}
@@ -78,8 +78,8 @@ export default function NewIncident() {
           <button className="button" type="submit">
             Registar
           </button>
-        </form>
-      </div>
-    </div>
+        </Form>
+      </Content>
+    </NewIncidentContainer>
   );
 }

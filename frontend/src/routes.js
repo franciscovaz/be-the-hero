@@ -14,12 +14,12 @@ export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={ Logon } />
-        <Route path="/register" component={ Register } />
+        <Route path="/" exact component={Logon} />
+        <Route path="/register" component={Register} />
 
-        <Route path="/profile" component={ Profile } />
-        <Route path="/incidents/new" component={ NewIncident } />
+        <Route path="/profile" component={Profile} />
+        <Route path="/incidents/new" component={NewIncident} />
       </Switch>
     </BrowserRouter>
-  )
+  );
 }

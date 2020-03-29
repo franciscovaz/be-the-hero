@@ -4,7 +4,7 @@ import { FiPower, FiTrash2 } from 'react-icons/fi';
 
 import api from '../../services/api';
 
-import './styles.css';
+import { ProfileContainer, Header, ListCases } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 
@@ -48,8 +48,8 @@ export default function Profile() {
   }
 
   return (
-    <div className="profile-container">
-      <header>
+    <ProfileContainer>
+      <Header>
         <img src={logoImg} alt="Be The Hero" />
         <span>Bem vinda, {ongName}</span>
 
@@ -59,13 +59,13 @@ export default function Profile() {
         <button onClick={handleLogout} type="button">
           <FiPower size={18} color="#E02041" />
         </button>
-      </header>
+      </Header>
 
       <h1>Casos Registados</h1>
 
       <ul>
         {incidents.map((incident) => (
-          <li key={incident.id}>
+          <ListCases key={incident.id}>
             <strong>CASO:</strong>
             <p>{incident.title}</p>
 
@@ -84,9 +84,9 @@ export default function Profile() {
             <button onClick={() => handleDelete(incident.id)} type="button">
               <FiTrash2 size={20} color="#a8a8b3" />
             </button>
-          </li>
+          </ListCases>
         ))}
       </ul>
-    </div>
+    </ProfileContainer>
   );
 }
