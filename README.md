@@ -61,10 +61,10 @@ I went beyond the application that was developed on OmniStack week from Rockeats
 ![image](shots/incident-dark.png)
 
 ### Mobile
-![image](shots/incidents-mobile.PNG)
-![image](shots/detail-mobile.PNG)
-![image](shots/mail-mobile.PNG)
-![image](shots/whatsapp-mobile.PNG)
+<img src="shots/incidents-mobile.PNG" height="450" />
+<img src="shots/detail-mobile.PNG" height="450" />
+<img src="shots/mail-mobile.PNG" height="450" />
+<img src="shots/whatsapp-mobile.jpg" height="450" />
 
 ### Back-end:
 ![image](shots/backend.png)
