@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Be The Hero" src="github/logo.svg" width="200px" />
+    <img alt="Be The Hero" src="frontend/src/assets/logo.svg" width="200px" />
 </h1>
 
 <h3 align="center">
@@ -61,10 +61,10 @@ I went beyond the application that was developed on OmniStack week from Rockeats
 ![image](shots/incident-dark.png)
 
 ### Mobile
-![image](shots/incidents-mobile.png)
-![image](shots/detail-mobile.png)
-![image](shots/mail-mobile.png)
-![image](shots/whatsapp-mobile.png)
+![image](shots/incidents-mobile.PNG)
+![image](shots/detail-mobile.PNG)
+![image](shots/mail-mobile.PNG)
+![image](shots/whatsapp-mobile.PNG)
 
 ### Back-end:
 ![image](shots/backend.png)
