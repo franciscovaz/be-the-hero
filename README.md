@@ -13,7 +13,8 @@
   <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#construction_worker-tools">Tools</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#camera">Shots</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
+  <a href="#memo-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#rocket-run-the-project">Run the project</a>
 </p>
 
 ## :rocket: About the project
@@ -68,6 +69,26 @@ I went beyond the application that was developed on OmniStack week from Rockeats
 
 ### Back-end:
 ![image](shots/backend.png)
+
+
+## :rocket: Run the project
+
+<p>
+  To run the backend of the project, go to the backend project folder and:
+
+  - $yarn install
+  - $yarn start
+  <br />
+ To run the frontend, go to frontend project folder and:
+ 
+  - $yarn install
+  - $yarn start
+  <br />
+ To run the mobile, go to mobile project folder and:
+ 
+  - $yarn instal
+  - $yarn ios
+</p>
 
 
 ## :memo: License
